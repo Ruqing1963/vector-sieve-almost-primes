@@ -1,0 +1,14 @@
+CERTIFICATE for Theorem 1.4 (two shifts, dimension 2): fixed point on the grid n = 1600, rho = 1.001, b_0 = 0.002   [     0 s]
+==============================================================================================================
+sieve tables: closed forms at the nodes from interval arithmetic; C1 in [1.505899012092841, 1.505899012092841]  [     0 s]
+dimension 2: beta in [4.8339865967029, 4.8339865967051], A in [43.4968058, 43.4969678] (from 1/G(S) <= A <= 1/g(S), S = 16)  [     4 s]
+    level 400/1600  [    19 s]
+    level 800/1600  [    41 s]
+    level 1200/1600  [    63 s]
+    level 1600/1600  [    85 s]
+point: (theta1, theta2, theta, lambda) = (0.4, 0.0035, 0.2, 0.036), s = 8.17 in T; 5525 ranges
+    u  >= 0.922903885   (integer table entry 922903885 / 1e9)
+    T  <= 0.421422206   (interval arithmetic)
+    2J <= 13.879481569   (integer table entries, logarithms in interval arithmetic)
+    u - T - 2 lambda J >= 0.001820   =>  POSITIVE
+    1/lambda + 2/theta <= 37.777778  =>  omega <= 37   [    86 s]

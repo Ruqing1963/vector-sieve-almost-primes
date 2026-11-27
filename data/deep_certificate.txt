@@ -1,0 +1,13 @@
+CERTIFICATE for Theorem 1.2: fixed point on the grid n = 1600, rho = 1.001, b_0 = 0.002   [     0 s]
+==============================================================================================================
+sieve tables: closed forms at the nodes from interval arithmetic; C1 in [1.505899012092841, 1.505899012092841]  [     0 s]
+    level 400/1600  [    10 s]
+    level 800/1600  [    30 s]
+    level 1200/1600  [    53 s]
+    level 1600/1600  [    76 s]
+point: (theta1, theta2, theta, lambda) = (0.398, 0.009, 0.19, 0.0935), s = 4.42 in T; 5525 ranges
+    u  >= 0.903518938   (integer table entry 903518938 / 1e9)
+    T  <= 0.447727527   (interval arithmetic)
+    J  <= 4.841602832   (integer table entries, logarithms in interval arithmetic)
+    u - T - lambda J >= 0.003102   =>  POSITIVE
+    1/lambda + 1/theta <= 15.958345  =>  omega(p + a) <= 15   [    78 s]

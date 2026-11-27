@@ -1,0 +1,53 @@
+LEVEL 3.  Exploration: can the method reach r = 14?   [     0 s]
+==============================================================================================================
+grid n = 1600, rho = 1.001, a_min = 0.002; fixed point on the inert primes throughout; one-sided values
+
+(a) Buchstab's identity on the first linear sieve of the switched term: T = (C1/2) C(theta1) w(theta2)
+    theta2 0.0080: w_rect = 2.16912, w_fix = 2.14271 (ratio 0.9878; the value 2 would be the ratio 0.9220)
+        with T (rectangle): 1/lam+1/theta = 15.9071 => r = 15 | theta1 0.39960 theta2 0.00800 theta 0.1984 lambda 0.09202 | u 0.90856 T 0.43231 J 5.17579
+        with T (fixed pt.): 1/lam+1/theta = 15.7867 => r = 15 | theta1 0.39840 theta2 0.00800 theta 0.2003 lambda 0.09264 | u 0.91688 T 0.43531 J 5.19838  [   148 s]
+        dual bound, omega <= 14, theta1 0.3859: budget u - T = 0.47565, J_psi >= 0.50413 for every psi (213 configurations, 517 cells; LP value 0.50413)  => EXCLUDED  [   178 s]
+        dual bound, omega <= 14, theta1 0.4000: budget u - T = 0.48146, J_psi >= 0.50413 for every psi (213 configurations, 517 cells; LP value 0.50413)  => EXCLUDED  [   209 s]
+        dual bound, omega <= 14, theta1 0.4147: budget u - T = 0.47053, J_psi >= 0.50413 for every psi (213 configurations, 517 cells; LP value 0.50413)  => EXCLUDED  [   238 s]
+    theta2 0.0090: w_rect = 2.19009, w_fix = 2.15986 (ratio 0.9862; the value 2 would be the ratio 0.9132)
+        with T (rectangle): 1/lam+1/theta = 15.8869 => r = 15 | theta1 0.39840 theta2 0.00900 theta 0.1912 lambda 0.09382 | u 0.90066 T 0.44493 J 4.85718
+        with T (fixed pt.): 1/lam+1/theta = 15.7433 => r = 15 | theta1 0.39681 theta2 0.00900 theta 0.1934 lambda 0.09457 | u 0.91190 T 0.44997 J 4.88430  [   374 s]
+        dual bound, omega <= 14, theta1 0.3824: budget u - T = 0.45358, J_psi >= 0.48416 for every psi (204 configurations, 515 cells; LP value 0.48416)  => EXCLUDED  [   403 s]
+        dual bound, omega <= 14, theta1 0.3964: budget u - T = 0.46192, J_psi >= 0.48416 for every psi (204 configurations, 515 cells; LP value 0.48416)  => EXCLUDED  [   432 s]
+        dual bound, omega <= 14, theta1 0.4109: budget u - T = 0.45377, J_psi >= 0.48416 for every psi (204 configurations, 515 cells; LP value 0.48416)  => EXCLUDED  [   461 s]
+    theta2 0.0100: w_rect = 2.21120, w_fix = 2.17730 (ratio 0.9847; the value 2 would be the ratio 0.9045)
+        with T (rectangle): 1/lam+1/theta = 15.9299 => r = 15 | theta1 0.39721 theta2 0.01000 theta 0.1841 lambda 0.09527 | u 0.89239 T 0.45780 J 4.56187
+        with T (fixed pt.): 1/lam+1/theta = 15.7605 => r = 15 | theta1 0.39563 theta2 0.01000 theta 0.1866 lambda 0.09615 | u 0.90380 T 0.46211 J 4.59378  [   592 s]
+        dual bound, omega <= 14, theta1 0.3824: budget u - T = 0.43455, J_psi >= 0.46072 for every psi (195 configurations, 512 cells; LP value 0.46072)  => EXCLUDED  [   616 s]
+        dual bound, omega <= 14, theta1 0.3964: budget u - T = 0.44168, J_psi >= 0.46072 for every psi (195 configurations, 512 cells; LP value 0.46072)  => EXCLUDED  [   641 s]
+        dual bound, omega <= 14, theta1 0.4109: budget u - T = 0.43153, J_psi >= 0.46072 for every psi (195 configurations, 512 cells; LP value 0.46072)  => EXCLUDED  [   666 s]
+    theta2 0.0110: w_rect = 2.23247, w_fix = 2.19503 (ratio 0.9832; the value 2 would be the ratio 0.8959)
+        with T (rectangle): 1/lam+1/theta = 16.0325 => r = 16 | theta1 0.39563 theta2 0.01100 theta 0.1766 lambda 0.09644 | u 0.88665 T 0.47382 J 4.28056
+        with T (fixed pt.): 1/lam+1/theta = 15.8344 => r = 15 | theta1 0.39444 theta2 0.01100 theta 0.1794 lambda 0.09747 | u 0.89533 T 0.47449 J 4.31761  [   799 s]
+        dual bound, omega <= 14, theta1 0.3790: budget u - T = 0.41109, J_psi >= 0.44428 for every psi (188 configurations, 510 cells; LP value 0.44428)  => EXCLUDED  [   822 s]
+        dual bound, omega <= 14, theta1 0.3929: budget u - T = 0.42074, J_psi >= 0.44428 for every psi (188 configurations, 510 cells; LP value 0.44428)  => EXCLUDED  [   846 s]
+        dual bound, omega <= 14, theta1 0.4073: budget u - T = 0.41337, J_psi >= 0.44428 for every psi (188 configurations, 510 cells; LP value 0.44428)  => EXCLUDED  [   869 s]
+    theta2 0.0120: w_rect = 2.25389, w_fix = 2.21303 (ratio 0.9819; the value 2 would be the ratio 0.8874)
+        with T (rectangle): 1/lam+1/theta = 16.1940 => r = 16 | theta1 0.39444 theta2 0.01200 theta 0.1684 lambda 0.09749 | u 0.87765 T 0.48722 J 4.00472
+        with T (fixed pt.): 1/lam+1/theta = 15.9635 => r = 15 | theta1 0.39287 theta2 0.01200 theta 0.1719 lambda 0.09857 | u 0.88940 T 0.49004 J 4.05160  [  1011 s]
+        dual bound, omega <= 14, theta1 0.3790: budget u - T = 0.39103, J_psi >= 0.42896 for every psi (181 configurations, 508 cells; LP value 0.42896)  => EXCLUDED  [  1036 s]
+        dual bound, omega <= 14, theta1 0.3929: budget u - T = 0.39936, J_psi >= 0.42896 for every psi (181 configurations, 508 cells; LP value 0.42896)  => EXCLUDED  [  1061 s]
+        dual bound, omega <= 14, theta1 0.4073: budget u - T = 0.38975, J_psi >= 0.42896 for every psi (181 configurations, 508 cells; LP value 0.42896)  => EXCLUDED  [  1087 s]
+
+(b) what if the switched term were smaller: min over theta2 of 1/lambda + 1/theta with T replaced by tau T
+    tau = 1.00: 1/lam+1/theta = 15.8869 => r = 15 | theta1 0.39840 theta2 0.00900 theta 0.1912 lambda 0.09382 | u 0.90066 T 0.44493 J 4.85718
+    tau = 0.98: 1/lam+1/theta = 15.6788 => r = 15 | theta1 0.39642 theta2 0.00900 theta 0.1944 lambda 0.09493 | u 0.91469 T 0.44993 J 4.89584
+    tau = 0.95: 1/lam+1/theta = 15.3678 => r = 15 | theta1 0.39365 theta2 0.00900 theta 0.1994 lambda 0.09660 | u 0.93403 T 0.45522 J 4.95668
+    tau = 0.92: 1/lam+1/theta = 15.0540 => r = 15 | theta1 0.38974 theta2 0.01000 theta 0.1975 lambda 0.10009 | u 0.94551 T 0.47212 J 4.72951
+    tau = 0.90: 1/lam+1/theta = 14.8377 => r = 14 | theta1 0.38780 theta2 0.01000 theta 0.2009 lambda 0.10141 | u 0.95905 T 0.47523 J 4.77094
+    tau = 0.85: 1/lam+1/theta = 14.3005 => r = 14 | theta1 0.38203 theta2 0.01000 theta 0.2103 lambda 0.10476 | u 0.99870 T 0.48735 J 4.88119
+    tau = 0.80: 1/lam+1/theta = 13.7485 => r = 13 | theta1 0.37484 theta2 0.01100 theta 0.2141 lambda 0.11017 | u 1.03293 T 0.51065 J 4.74070
+    tau = 0.70: 1/lam+1/theta = 12.6176 => r = 12 | theta1 0.35871 theta2 0.01200 theta 0.2306 lambda 0.12075 | u 1.12719 T 0.55264 J 4.75818
+    tau = 0.50: 1/lam+1/theta = 10.4819 => r = 10 | theta1 0.34020 theta2 0.01200 theta 0.2859 lambda 0.14317 | u 1.24755 T 0.48725 J 5.31043
+
+(c) general weights 1 - sum_{q | n} psi(log q / log x) by linear programming, at theta1 = 0.3968, theta2 = 0.0090
+    budget u - T = 0.46193 (T with the fixed point of (a))
+    omega <= 15: cost of the optimal step weights 0.45444 (budget/cost 1.0165); Richert weights on the same cells 0.45466 (theta = 0.193, budget/cost 1.0160); 241 cuts, min sum psi = 1.000000  [  1092 s]
+    omega <= 14: cost of the optimal step weights 0.49998 (budget/cost 0.9239); Richert weights on the same cells 0.50012 (theta = 0.208, budget/cost 0.9236); 277 cuts, min sum psi = 1.000000  [  1098 s]
+    omega <= 13: cost of the optimal step weights 0.55335 (budget/cost 0.8348); Richert weights on the same cells 0.55341 (theta = 0.227, budget/cost 0.8347); 295 cuts, min sum psi = 1.000000  [  1103 s]
+done [  1103 s]

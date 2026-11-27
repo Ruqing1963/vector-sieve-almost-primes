@@ -1,0 +1,42 @@
+﻿LEVEL 2.  Buchstab's identity on the primes q = 3 (4) of p - 1, coupled with the linear sieve on p + a   [     0 s]
+==============================================================================================================
+units: A x (log x)^{-5/2} / theta2;  criterion  M = u - T - lambda J > 0;  all values one-sided (see the header)
+
+(a) free switching levels: min of 1/lambda + 1/theta after k Buchstab steps; grid n = 1600, rho = 1.001, a_min = 0.002
+    theta2 0.0050 (m = 5525): k=0: 17.471  k=1: 17.315  k=2: 17.096  k=3: 16.884  k=4: 16.724  k=6: 16.514  k=8: 16.455  k=12: 16.448  k=inf: 16.448  [   189 s]
+    theta2 0.0060 (m = 5525): k=0: 17.434  k=1: 17.227  k=2: 16.946  k=3: 16.678  k=4: 16.484  k=6: 16.239  k=8: 16.177  k=12: 16.171  k=inf: 16.171  [   308 s]
+    theta2 0.0070 (m = 5525): k=0: 17.527  k=1: 17.255  k=2: 16.904  k=3: 16.575  k=4: 16.345  k=6: 16.067  k=8: 16.004  k=12: 15.998  k=inf: 15.998  [   441 s]
+    theta2 0.0080 (m = 5525): k=0: 17.722  k=1: 17.381  k=2: 16.952  k=3: 16.553  k=4: 16.287  k=6: 15.977  k=8: 15.913  k=12: 15.907  k=inf: 15.907  [   559 s]
+    theta2 0.0090 (m = 5525): k=0: 18.034  k=1: 17.600  k=2: 17.081  k=3: 16.602  k=4: 16.297  k=6: 15.956  k=8: 15.892  k=12: 15.887  k=inf: 15.887  [   670 s]
+    theta2 0.0100 (m = 5525): k=0: 18.445  k=1: 17.909  k=2: 17.285  k=3: 16.715  k=4: 16.369  k=6: 15.998  k=8: 15.934  k=12: 15.930  k=inf: 15.930  [   772 s]
+    theta2 0.0110 (m = 5525): k=0: 18.986  k=1: 18.315  k=2: 17.567  k=3: 16.891  k=4: 16.501  k=6: 16.099  k=8: 16.037  k=12: 16.033  k=inf: 16.033  [   858 s]
+  best over theta2:
+    k = 0    1/lam+1/theta = 17.4343 => r = 17 | theta1 0.39681 theta2 0.00600 theta 0.1937 lambda 0.08148 | u 0.91214 T 0.44322 J 5.75508
+    k = 1    1/lam+1/theta = 17.2271 => r = 17 | theta1 0.39761 theta2 0.00600 theta 0.1966 lambda 0.08237 | u 0.91357 T 0.43771 J 5.77680
+    k = 2    1/lam+1/theta = 16.9044 => r = 16 | theta1 0.39761 theta2 0.00700 theta 0.1919 lambda 0.08552 | u 0.90393 T 0.44198 J 5.40138
+    k = 3    1/lam+1/theta = 16.5529 => r = 16 | theta1 0.39801 theta2 0.00800 theta 0.1891 lambda 0.08878 | u 0.89544 T 0.44347 J 5.09086
+    k = 4    1/lam+1/theta = 16.2869 => r = 16 | theta1 0.39880 theta2 0.00800 theta 0.1928 lambda 0.09009 | u 0.89947 T 0.43788 J 5.12394
+    k = 6    1/lam+1/theta = 15.9561 => r = 15 | theta1 0.39840 theta2 0.00900 theta 0.1903 lambda 0.09344 | u 0.89799 T 0.44493 J 4.84839
+    k = 8    1/lam+1/theta = 15.8920 => r = 15 | theta1 0.39840 theta2 0.00900 theta 0.1912 lambda 0.09378 | u 0.90046 T 0.44493 J 4.85738
+    k = 12   1/lam+1/theta = 15.8870 => r = 15 | theta1 0.39840 theta2 0.00900 theta 0.1912 lambda 0.09382 | u 0.90066 T 0.44493 J 4.85718
+    k = inf  1/lam+1/theta = 15.8870 => r = 15 | theta1 0.39840 theta2 0.00900 theta 0.1912 lambda 0.09382 | u 0.90066 T 0.44493 J 4.85718
+
+(b) levels capped as in [NX] (the setting of the Erratum), rectangle bounds and fixed point; same grid
+    theta2 0.0010: fixed point 1/lam+1/theta = 39.3931 => r = 39 | theta1 0.47456 theta2 0.00100 theta 0.1172 lambda 0.03240 | u 0.44283 T 0.17680 J 8.20982  [   947 s]
+    theta2 0.0012: fixed point 1/lam+1/theta = 38.7360 => r = 38 | theta1 0.47408 theta2 0.00120 theta 0.1147 lambda 0.03331 | u 0.44119 T 0.18202 J 7.77947  [  1026 s]
+    theta2 0.0016: fixed point 1/lam+1/theta = 37.9511 => r = 37 | theta1 0.47361 theta2 0.00160 theta 0.1091 lambda 0.03474 | u 0.43282 T 0.18730 J 7.06651  [  1114 s]
+    theta2 0.0020: fixed point 1/lam+1/theta = 37.6396 => r = 37 | theta1 0.47266 theta2 0.00200 theta 0.1038 lambda 0.03571 | u 0.42987 T 0.19802 J 6.49210  [  1215 s]
+    theta2 0.0025: fixed point 1/lam+1/theta = 37.7199 => r = 37 | theta1 0.47172 theta2 0.00250 theta 0.0969 lambda 0.03650 | u 0.42357 T 0.20895 J 5.88002  [  1322 s]
+
+(c) refinement of the grid at theta2 = 0.0090, fixed point, theta1 = 0.398 (a node of every grid)
+    n =  800, rho = 1.002, a_min = 0.004 (m = 2418): 1/lam+1/theta = 16.1033 => r = 16 | theta1 0.39800 theta2 0.00900 theta 0.1881 lambda 0.09270 | u 0.89533 T 0.44773 J 4.82867  [  1338 s]
+    n = 1600, rho = 1.001, a_min = 0.002 (m = 5525): 1/lam+1/theta = 15.8853 => r = 15 | theta1 0.39800 theta2 0.00900 theta 0.1912 lambda 0.09384 | u 0.90352 T 0.44773 J 4.85720  [  1412 s]
+    n = 3200, rho = 1.0005, a_min = 0.001 (m = 12433): 1/lam+1/theta = 15.7918 => r = 15 | theta1 0.39800 theta2 0.00900 theta 0.1928 lambda 0.09429 | u 0.90709 T 0.44773 J 4.87174  [  1844 s]
+
+(d) witness on the finest grid
+    (theta1, theta2, theta, lambda) = (0.398, 0.0090, 0.195, 0.0934),  s = 4.42 in T
+    u >= 0.907088   T <= 0.447726   J <= 4.898649   (lambda_max = 0.09377)
+    M = u - T - lambda J >= 0.001828  => POSITIVE
+    1/lambda + 1/theta = 15.83484  =>  omega(p + a) <= 15
+    rectangle bounds at the same point: u_0 >= 0.829325, and J_0 <= 4.989030
+done [  1845 s]

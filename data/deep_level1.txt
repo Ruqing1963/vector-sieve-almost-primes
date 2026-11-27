@@ -1,0 +1,49 @@
+LEVEL 1.  Free switching levels (rectangle bounds of the vector sieve)   [     0 s]
+==============================================================================================================
+constants (shift a = 2):  C = 1.772720  kappa = 1.159643  A = C kappa e^{-3g/2}/4 = 0.216213
+                          c_j = 0.819802  c_2 = 0.660162  c_3^* = 0.811558  K = 2 c_j c_2^2 c_3^* = 0.579909
+identity K/A = 2 e^{3 gamma/2}/sqrt(pi):  K/A = 2.682115195,  2 e^{3g/2}/sqrt(pi) = 2.682115195
+  (so the criterion does not involve any Euler product; units below: A x (log x)^{-5/2} / theta2)
+sieve tables: step 1/40000, enclosure widths at s = 5: F1 3.8e-06 f1 1.1e-06 F2 4.9e-06 f2 1.6e-06
+
+(a) one-sided optimisation, rectangle bounds; theta1 in steps of 0.0005
+    capped theta2 0.0008: 1/lam+1/theta = 40.7981 => r = 40 | theta1 0.47450 theta2 0.00080 theta 0.1186 lambda 0.03090 | u 0.44643 T 0.17741 J 8.70689  [    62 s]
+    capped theta2 0.0010: 1/lam+1/theta = 40.3223 => r = 40 | theta1 0.47400 theta2 0.00100 theta 0.1141 lambda 0.03168 | u 0.44133 T 0.18293 J 8.15548  [   118 s]
+    capped theta2 0.0012: 1/lam+1/theta = 40.1386 => r = 40 | theta1 0.47350 theta2 0.00120 theta 0.1099 lambda 0.03222 | u 0.43631 T 0.18851 J 7.69161  [   168 s]
+    capped theta2 0.0014: 1/lam+1/theta = 40.1746 => r = 40 | theta1 0.47300 theta2 0.00140 theta 0.1056 lambda 0.03257 | u 0.43136 T 0.19416 J 7.28246  [   194 s]
+    capped theta2 0.0016: 1/lam+1/theta = 40.3910 => r = 40 | theta1 0.47250 theta2 0.00160 theta 0.1013 lambda 0.03277 | u 0.42645 T 0.19988 J 6.91411  [   218 s]
+    capped theta2 0.0020: 1/lam+1/theta = 41.2907 => r = 41 | theta1 0.47150 theta2 0.00200 theta 0.0923 lambda 0.03283 | u 0.41673 T 0.21152 J 6.25026  [   238 s]
+  => capped levels: 1/lam+1/theta = 40.1386 => r = 40 | theta1 0.47350 theta2 0.00120 theta 0.1099 lambda 0.03222 | u 0.43631 T 0.18851 J 7.69161
+    free   theta2 0.0040: 1/lam+1/theta = 17.6608 => r = 17 | theta1 0.40050 theta2 0.00400 theta 0.2133 lambda 0.07709 | u 0.93303 T 0.40974 J 6.78793  [   270 s]
+    free   theta2 0.0050: 1/lam+1/theta = 17.4685 => r = 17 | theta1 0.39850 theta2 0.00500 theta 0.2032 lambda 0.07970 | u 0.92368 T 0.42735 J 6.22787  [   295 s]
+    free   theta2 0.0055: 1/lam+1/theta = 17.4336 => r = 17 | theta1 0.39750 theta2 0.00550 theta 0.1984 lambda 0.08069 | u 0.91901 T 0.43632 J 5.98190  [   314 s]
+    free   theta2 0.0060: 1/lam+1/theta = 17.4327 => r = 17 | theta1 0.39700 theta2 0.00600 theta 0.1937 lambda 0.08150 | u 0.91086 T 0.44193 J 5.75356  [   335 s]
+    free   theta2 0.0065: 1/lam+1/theta = 17.4627 => r = 17 | theta1 0.39600 theta2 0.00650 theta 0.1886 lambda 0.08224 | u 0.90614 T 0.45110 J 5.53334  [   357 s]
+    free   theta2 0.0070: 1/lam+1/theta = 17.5215 => r = 17 | theta1 0.39500 theta2 0.00700 theta 0.1837 lambda 0.08280 | u 0.90140 T 0.46040 J 5.32629  [   381 s]
+    free   theta2 0.0080: 1/lam+1/theta = 17.7209 => r = 17 | theta1 0.39300 theta2 0.00800 theta 0.1735 lambda 0.08363 | u 0.89187 T 0.47935 J 4.93241  [   404 s]
+  => free levels: 1/lam+1/theta = 17.4327 => r = 17 | theta1 0.39700 theta2 0.00600 theta 0.1937 lambda 0.08150 | u 0.91086 T 0.44193 J 5.75356
+     (optimal s in T at theta2 = 0.0060: 4.61)
+
+(b) unweighted criterion u - T > 0 (rectangle bounds): largest theta2
+    capped: theta2* = 0.005626, 1/theta2* = 177.749  [   406 s]
+    free  : theta2* = 0.020407, 1/theta2* = 49.003  [   407 s]
+
+(c) explicit witness for r = 17, interval arithmetic (mpmath.iv, 30 digits)
+    (theta1, theta2, theta, lambda) = (0.4, 0.006, 0.19, 0.08), all splittings with s2 = 5
+    c = 1/2 - 5 theta2 = [0.4700, 0.4700], s0 = c/theta1 = [1.1750, 1.1750], l0 = log(sqrt s0 + sqrt(s0-1)) = [0.40700005, 0.40700005]
+    F2(5) in [1.00173063, 1.00175019]   f2(5) in [0.99824027, 0.99824318]
+    C(theta1) in [0.26292374, 0.26294638]   Psi in [3.78376113, 3.78376113]
+    main  (1/sqrt c)[f2 - F2 (1 - l0)]  in [0.58958988, 0.58961105]
+    switched  F2 C(theta1)/(2c)         in [0.28019018, 0.28021977]
+    Richert   F2 Psi                    in [3.79030940, 3.79038344]
+    M/C1 = main - switched - lambda Richert in [0.00613943, 0.00619612]   =>  POSITIVE
+    1/lambda + 1/theta = 17.76316 < 18  =>  omega(p+2) <= 17   [   410 s]
+
+(d) explicit witness for the unweighted bound, interval arithmetic
+    theta1 = 0.3694, theta2 = 0.02041 (1/theta2 = 48.9956), s_f = 4.1, s_W = 4:
+      F2(s_f) [1.01716117, 1.01717261] f2(s_f) [0.98300247, 0.98300248] F2(s_W) [1.02163641, 1.02164670] C [0.40750862, 0.40751231]
+      main [0.49761404, 0.49762558]  switched [0.49756865, 0.49757816]  G/C1 in [3.588e-05, 5.693e-05]  =>  POSITIVE, omega(p+2) <= 48   [   423 s]
+    theta1 = 0.368, theta2 = 0.0202 (1/theta2 = 49.5050), s_f = 4.1, s_W = 4:
+      F2(s_f) [1.01716117, 1.01717261] f2(s_f) [0.98300247, 0.98300248] F2(s_W) [1.02163641, 1.02164670] C [0.41483587, 0.41483963]
+      main [0.51069757, 0.51070895]  switched [0.50550027, 0.50550995]  G/C1 in [5.188e-03, 5.209e-03]  =>  POSITIVE, omega(p+2) <= 49   [   437 s]
+done [   437 s]

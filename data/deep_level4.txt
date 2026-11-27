@@ -1,0 +1,61 @@
+LEVEL 4.  General even shifts a: p = m^2 + n^2 + 1, p + a almost prime   [     0 s]
+==============================================================================================================
+(a) local factors: main term M_l(a) and switched term S_l(a), exact rational arithmetic, primes 3 <= l < 200
+    a =     2: M_l = S_l for all l: True;  primes dividing a(a+1): [3];  M_l = 0 at l in []
+    a =    -2: M_l = S_l for all l: True;  primes dividing a(a+1): [];  M_l = 0 at l in [3]
+    a =     4: M_l = S_l for all l: True;  primes dividing a(a+1): [5];  M_l = 0 at l in [3]
+    a =    -4: M_l = S_l for all l: True;  primes dividing a(a+1): [3];  M_l = 0 at l in []
+    a =     6: M_l = S_l for all l: True;  primes dividing a(a+1): [3, 7];  M_l = 0 at l in []
+    a =    -6: M_l = S_l for all l: True;  primes dividing a(a+1): [3, 5];  M_l = 0 at l in []
+    a =     8: M_l = S_l for all l: True;  primes dividing a(a+1): [3];  M_l = 0 at l in []
+    a =    10: M_l = S_l for all l: True;  primes dividing a(a+1): [5, 11];  M_l = 0 at l in [3]
+    a =    12: M_l = S_l for all l: True;  primes dividing a(a+1): [3, 13];  M_l = 0 at l in []
+    a =    14: M_l = S_l for all l: True;  primes dividing a(a+1): [3, 5, 7];  M_l = 0 at l in []
+    a =    20: M_l = S_l for all l: True;  primes dividing a(a+1): [3, 5, 7];  M_l = 0 at l in []
+    a =    30: M_l = S_l for all l: True;  primes dividing a(a+1): [3, 5, 31];  M_l = 0 at l in []
+    a =    42: M_l = S_l for all l: True;  primes dividing a(a+1): [3, 7, 43];  M_l = 0 at l in []
+    a =   100: M_l = S_l for all l: True;  primes dividing a(a+1): [5, 101];  M_l = 0 at l in [3]
+    a =  2310: M_l = S_l for all l: True;  primes dividing a(a+1): [3, 5, 7, 11, 2311];  M_l = 0 at l in []
+    a =   -12: M_l = S_l for all l: True;  primes dividing a(a+1): [3, 11];  M_l = 0 at l in []
+    => the local factors of the two terms agree for every prime and every shift: True
+       (M_3 = 0 exactly when a = 1 mod 3: then 3 | (p - 1)(p + a); one takes p = 10, 19 mod 27, so that 9 || p - 1)
+
+(b) singular series C(a) = 2 prod_{l>2} M_l(a)(1 - 1/l)^{-nu_l}  (A(a) = C(a) kappa e^{-3g/2}/4, K(a) = 2 e^{3g/2} A(a)/sqrt(pi))
+    a =     2: C(a) = 1.772721   C(a)/C(2) = 1.000000
+    a =    -2: C(a) = 0.393938   C(a)/C(2) = 0.222222   (classes mod 27)
+    a =     4: C(a) = 0.393938   C(a)/C(2) = 0.222222   (classes mod 27)
+    a =    -4: C(a) = 1.772721   C(a)/C(2) = 1.000000
+    a =     6: C(a) = 2.215901   C(a)/C(2) = 1.250000
+    a =    -6: C(a) = 1.772721   C(a)/C(2) = 1.000000
+    a =     8: C(a) = 1.772721   C(a)/C(2) = 1.000000
+    a =    10: C(a) = 0.590907   C(a)/C(2) = 0.333333   (classes mod 27)
+    a =    12: C(a) = 1.772721   C(a)/C(2) = 1.000000
+    a =    14: C(a) = 2.215901   C(a)/C(2) = 1.250000
+    a =    20: C(a) = 2.954534   C(a)/C(2) = 1.666667
+    a =    30: C(a) = 2.448043   C(a)/C(2) = 1.380952
+    a =    42: C(a) = 2.271298   C(a)/C(2) = 1.281250
+    a =   100: C(a) = 0.525251   C(a)/C(2) = 0.296296   (classes mod 27)
+    a =  2310: C(a) = 3.325291   C(a)/C(2) = 1.875812
+    a =   -12: C(a) = 1.994311   C(a)/C(2) = 1.125000
+    check: C(2) = 1.772721 against C = 1.772721 of [NX]
+
+(c) counts up to x = 6e+07 of primes p = 3 (8) with p - 1 free of prime factors = 3 (4) and p + a prime
+    (for a = 1 (3): p = 10, 19 (27) and (p - 1)/9 free of prime factors = 3 (4)); prediction N_a/N_2 -> C(a)/C(2)
+    #{p <= x: p = 3 (8), p - 1 free of inert primes} = 202114;  N_2 = 29946   [     2 s]
+    a =     2: N_a =  29946   N_a/N_2 = 1.0000   predicted 1.0000   (statistical error about 0.008)
+    a =    -2: N_a =   7235   N_a/N_2 = 0.2416   predicted 0.2222   (statistical error about 0.003)  [with the factor (log(x/2)/log(x/18))^(1/2): 0.2379]  [standard classes: 0]
+    a =     4: N_a =   6883   N_a/N_2 = 0.2298   predicted 0.2222   (statistical error about 0.003)  [with the factor (log(x/2)/log(x/18))^(1/2): 0.2379]  [standard classes: 0]
+    a =    -4: N_a =  30050   N_a/N_2 = 1.0035   predicted 1.0000   (statistical error about 0.008)
+    a =     6: N_a =  37820   N_a/N_2 = 1.2629   predicted 1.2500   (statistical error about 0.010)
+    a =    -6: N_a =  29487   N_a/N_2 = 0.9847   predicted 1.0000   (statistical error about 0.008)
+    a =     8: N_a =  30299   N_a/N_2 = 1.0118   predicted 1.0000   (statistical error about 0.008)
+    a =    10: N_a =  10559   N_a/N_2 = 0.3526   predicted 0.3333   (statistical error about 0.004)  [with the factor (log(x/2)/log(x/18))^(1/2): 0.3569]  [standard classes: 0]
+    a =    12: N_a =  29870   N_a/N_2 = 0.9975   predicted 1.0000   (statistical error about 0.008)
+    a =    14: N_a =  37014   N_a/N_2 = 1.2360   predicted 1.2500   (statistical error about 0.010)
+    a =    20: N_a =  50108   N_a/N_2 = 1.6733   predicted 1.6667   (statistical error about 0.012)
+    a =    30: N_a =  41417   N_a/N_2 = 1.3831   predicted 1.3810   (statistical error about 0.010)
+    a =    42: N_a =  38641   N_a/N_2 = 1.2904   predicted 1.2812   (statistical error about 0.010)
+    a =   100: N_a =   9598   N_a/N_2 = 0.3205   predicted 0.2963   (statistical error about 0.004)  [with the factor (log(x/2)/log(x/18))^(1/2): 0.3172]  [standard classes: 0]
+    a =  2310: N_a =  56396   N_a/N_2 = 1.8833   predicted 1.8758   (statistical error about 0.013)
+    a =   -12: N_a =  34090   N_a/N_2 = 1.1384   predicted 1.1250   (statistical error about 0.009)
+done [     2 s]

@@ -1,0 +1,39 @@
+PAIRS.  p = m^2 + n^2 + 1 with (p + a1)(p + a2) almost prime: semi-linear sieve x sieve of dimension 2   [     0 s]
+==============================================================================================================
+dimension 2: beta = 4.833986596704, A in [43.4968874, 43.4968875]
+    s =  5.000: F in [1.7398755, 1.7398755]   f in [0.1851726, 0.1851726]
+    s =  5.834: F in [1.2779837, 1.2779838]   f in [0.7303070, 0.7303070]
+    s =  6.000: F in [1.2134815, 1.2134830]   f in [0.7886418, 0.7886418]
+    s =  7.000: F in [1.0377938, 1.0377989]   f in [0.9623644, 0.9623649]
+    s =  8.000: F in [1.0049283, 1.0049332]   f in [0.9950526, 0.9950549]
+    s = 10.000: F in [1.0000414, 1.0000454]   f in [0.9999549, 0.9999583]
+    s = 14.000: F in [0.9999981, 1.0000019]   f in [0.9999982, 1.0000018]
+
+(a) local factors M_l = S_l for pairs of shifts (exact arithmetic, 3 <= l < 200); admissible if M_l > 0 for all l
+    (a1, a2) = (2, 6)   : M_l = S_l for all l: True;  admissible: True
+    (a1, a2) = (2, 8)   : M_l = S_l for all l: True;  admissible: True
+    (a1, a2) = (6, 8)   : M_l = S_l for all l: True;  admissible: True
+    (a1, a2) = (2, 12)  : M_l = S_l for all l: True;  admissible: True
+    (a1, a2) = (6, 12)  : M_l = S_l for all l: True;  admissible: True
+    (a1, a2) = (-4, 2)  : M_l = S_l for all l: True;  admissible: True
+    (a1, a2) = (2, 4)   : M_l = S_l for all l: True;  admissible: False
+    (a1, a2) = (2, 30)  : M_l = S_l for all l: True;  admissible: True
+
+(b) criterion u - T - 2 lambda J > 0, omega((p+a1)(p+a2)) < 1/lambda + 2/theta; one-sided values, grid n = 1600, rho = 1.001, b_0 = 0.002
+    theta2 0.0025: rectangle 1/lam+2/theta = 39.6049 => r = 39 | theta1 0.39960 theta2 0.00250 theta 0.2097 lambda 0.03326 | u 0.93365 T 0.41692 J 15.53639
+                   fixed pt. 1/lam+2/theta = 38.2541 => r = 38 | theta1 0.40200 theta2 0.00250 theta 0.2181 lambda 0.03438 | u 0.93892 T 0.40092 J 15.64794  [   123 s]
+    theta2 0.0030: rectangle 1/lam+2/theta = 39.5857 => r = 39 | theta1 0.39801 theta2 0.00300 theta 0.2006 lambda 0.03376 | u 0.92451 T 0.43142 J 14.60375
+                   fixed pt. 1/lam+2/theta = 37.8547 => r = 37 | theta1 0.40080 theta2 0.00300 theta 0.2112 lambda 0.03523 | u 0.93241 T 0.41246 J 14.75987  [   238 s]
+    theta2 0.0035: rectangle 1/lam+2/theta = 39.8231 => r = 39 | theta1 0.39642 theta2 0.00350 theta 0.1916 lambda 0.03403 | u 0.91514 T 0.44621 J 13.77835
+                   fixed pt. 1/lam+2/theta = 37.6765 => r = 37 | theta1 0.39960 theta2 0.00350 theta 0.2047 lambda 0.03584 | u 0.92565 T 0.42422 J 13.99272  [   352 s]
+    theta2 0.0040: rectangle 1/lam+2/theta = 40.2854 => r = 40 | theta1 0.39484 theta2 0.00400 theta 0.1825 lambda 0.03410 | u 0.90554 T 0.46131 J 13.02759
+                   fixed pt. 1/lam+2/theta = 37.6788 => r = 37 | theta1 0.39880 theta2 0.00400 theta 0.1975 lambda 0.03629 | u 0.91585 T 0.43343 J 13.29181  [   459 s]
+    theta2 0.0045: rectangle 1/lam+2/theta = 40.9595 => r = 40 | theta1 0.39326 theta2 0.00450 theta 0.1731 lambda 0.03401 | u 0.89571 T 0.47671 J 12.32157
+                   fixed pt. 1/lam+2/theta = 37.8382 => r = 37 | theta1 0.39761 theta2 0.00450 theta 0.1903 lambda 0.03659 | u 0.90849 T 0.44559 J 12.65074  [   565 s]
+    theta2 0.0050: rectangle 1/lam+2/theta = 41.8578 => r = 41 | theta1 0.39169 theta2 0.00500 theta 0.1634 lambda 0.03376 | u 0.88554 T 0.49244 J 11.64403
+                   fixed pt. 1/lam+2/theta = 38.1432 => r = 38 | theta1 0.39642 theta2 0.00500 theta 0.1831 lambda 0.03674 | u 0.90082 T 0.45797 J 12.05512  [   669 s]
+
+(c) witness: (theta1, theta2, theta, lambda) = (0.39960, 0.0035, 0.200, 0.0360), s = 8.17 in T
+    u >= 0.925652   T <= 0.424148   2J <= 13.879393   u - T - 2 lambda J >= 0.001846
+    1/lambda + 2/theta = 37.7778  =>  omega((p+a1)(p+a2)) <= 37
+done [   669 s]
